@@ -51,7 +51,7 @@ const Home = () => {
         <Projects projects={projects} />
         <Experience experience={experience} />
         <Certifications certifications={certifications} achievements={achievements} />
-        <Gallery gallery={gallery} />
+        {/* <Gallery gallery={gallery} /> */}
         <Contact profile={profile} />
       </main>
       <Footer profile={profile} />
