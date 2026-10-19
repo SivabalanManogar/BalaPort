@@ -1,0 +1,114 @@
+/* ─── Timeline ──────────────────────────────────────── */
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--accent-1), var(--accent-2));
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+.timeline-item {
+  display: flex;
+  justify-content: flex-end;
+  width: 46%;
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.timeline-item.right {
+  justify-content: flex-start;
+  align-self: flex-end;
+  margin-left: 54%;
+}
+
+.timeline-dot {
+  position: absolute;
+  right: -44px;
+  top: 28px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--accent-gradient);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  border: 3px solid var(--bg-secondary);
+  box-shadow: 0 0 16px rgba(79, 142, 247, 0.5);
+}
+
+.timeline-item.right .timeline-dot {
+  right: auto;
+  left: -44px;
+}
+
+.timeline-card {
+  padding: 24px;
+  width: 100%;
+}
+
+.timeline-period {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--accent-1);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background: rgba(79, 142, 247, 0.1);
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  margin-bottom: 12px;
+}
+
+.timeline-role {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+
+.timeline-company {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.timeline-desc {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+/* Mobile - Stack vertically */
+@media (max-width: 768px) {
+  .timeline-line {
+    left: 18px;
+  }
+  .timeline-item,
+  .timeline-item.right {
+    width: 100%;
+    margin-left: 50px;
+    justify-content: flex-start;
+    margin-bottom: 24px;
+  }
+  .timeline-dot,
+  .timeline-item.right .timeline-dot {
+    right: auto;
+    left: -44px;
+    top: 24px;
+  }
+}
