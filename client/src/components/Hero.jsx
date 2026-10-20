@@ -103,7 +103,7 @@ const Hero = ({ profile }) => {
               View Projects
             </button>
             <a
-              href="Siva Resume.pdf"
+              href="SivaMano.pdf"
               download
               className="btn btn-outline"
               target="_blank"
